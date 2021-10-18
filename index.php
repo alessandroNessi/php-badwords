@@ -23,8 +23,10 @@
     <h1>Welcome to php introduction</h1>
     <p>il testo nella originale nella variabile è lungo <?php echo strval(strlen($loremTxt)) . " caratteri:" . $loremTxt ?></p>
     <div class="flex">
-        <input type="text">
-        <button id="buttonClick">filtra la parola</button>
+        <form action="./index.php">
+            <input name="word" type="text">
+            <input type="submit" value="Sostituisci la parola" />
+        </form>
     </div>
     <p id="result">
         <?php $result= str_replace($wordToFilter, "***", $loremTxt); ?>
